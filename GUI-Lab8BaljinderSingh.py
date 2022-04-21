@@ -16,7 +16,7 @@ def main():
 
     #name
     frm_usrinpt = ttk.Frame(root)
-    frm_usrinpt.grid(row=0, column=0, columnspan=2 padx=15, pady=15)
+    frm_usrinpt.grid(row=0, column=0, columnspan=2 ,padx=15, pady=15)
     #info
     frm_infrtn = ttk.LabelFrame(root, text="Info")
     frm_infrtn.grid(row=1, column=0, padx=15, pady=15, sticky=N)
