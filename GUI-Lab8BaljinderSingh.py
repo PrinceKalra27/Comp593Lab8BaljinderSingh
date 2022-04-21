@@ -6,13 +6,13 @@ from threading import currentThread
 from turtle import st
 
 from setuptools import Command
-from pokeapii import get_poke_info
+from POKE import get_poke_info
 
 def main():
     root = Tk()
     root.title("Pokemon Information")
     #iconchange
-    root.iconbitmap("Poke-Ball.ico")
+    root.iconbitmap("Poke_Icon.ico")
 
     #name
     frm_usrinpt = ttk.Frame(root)
@@ -24,7 +24,7 @@ def main():
     From_stats = ttk.LabelFrame(root, text="Stats")
     From_stats.grid(row=1, column=1, padx = 9,pady=10)
     #table to display values
-    name_lbl = ttk.Label(frm_usrinpt, test = "Pokemon Name:")
+    name_lbl = ttk.Label(frm_usrinpt, text = "Pokemon Name:")
     name_lbl.grid(row=0,column=0, padx=9, pady=10)
     #entry to display values
     name_entry = ttk.Entry(frm_usrinpt)
@@ -62,7 +62,7 @@ def main():
     #type
     lbl_type = ttk.Label(frm_infrtn, text= 'Type:')
     lbl_type.grid(row=500, column=100)
-    lbl_type_value = ttk.Progressbar(frm_infrtn, text="TBD")
+    lbl_type_value = ttk.Label(frm_infrtn, text = "TBD")
     lbl_type_value.grid(row=500, column=200, padx=15, pady= 7)
     #HealthPoint(hp)
     lbl_hp = ttk.Label(From_stats, text = 'HP:')
