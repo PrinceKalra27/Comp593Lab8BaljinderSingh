@@ -37,7 +37,7 @@ def main():
         if poke_dict:
             lbl_height_value['text']= str(poke_dict['height']) + ' dm'
             lbl_weight_value['text']= str(poke_dict['weight']) + ' hg'
-            type_list = (t['text']['name'] for t in poke_dict['types'])
+            type_list = (t['type']['name'] for t in poke_dict['types'])
             lbl_type_value['text'] = ', '.join(type_list)
             pgp_hp['value']=poke_dict['stats'][0]['base_stat']
             pgp_attack['value']=poke_dict['stats'][1]['base_stat']
@@ -78,7 +78,7 @@ def main():
     lbl_defence = ttk.Label(From_stats, text = 'Defence:')
     lbl_defence.grid(row=300, column=100, sticky= E)
     pgp_defence = ttk.Progressbar(From_stats, length=200 , maximum=225)
-    pgp_attack.grid(row=300, column=200, padx=10, pady=10)
+    pgp_defence.grid(row=300, column=200, padx=10, pady=10)
     #Special Attack
     lbl_special_attack = ttk.Label(From_stats, text = 'Special Attack:')
     lbl_special_attack.grid(row=400, column=100, sticky= E)
